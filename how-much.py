@@ -25,12 +25,7 @@
 
 def howmuch(m, n):
     result = []
-    if(n > m):
-        for i in range(m,n+1):
-            if i % 9 == 1 and i % 7 == 2:
-                result.append(["M: "+str(i), "B: "+str(int((i-2)/7)), "C: "+str(int((i-1)/9))])
-    else:
-        for i in range(n,m+1):
+    for i in range(min(m,n),max(m,n)+1):
             if i % 9 == 1 and i % 7 == 2:
                 result.append(["M: "+str(i), "B: "+str(int((i-2)/7)), "C: "+str(int((i-1)/9))])
     return result
