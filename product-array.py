@@ -18,3 +18,11 @@ from functools import reduce
 def product_array(numbers):
     tot = reduce(mul,numbers)
     return [tot//n for n in numbers]
+
+# Or with numpy prod
+
+from numpy import prod
+
+def product_array(numbers):
+    p = prod(numbers)
+    return [p//i for i in numbers]
